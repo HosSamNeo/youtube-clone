@@ -4,7 +4,7 @@ import { Sidebar , Videos } from '../../components';
 import { fetchFromApi } from '../../utils/fetchFromApi';
 
 const Feed = ({isSidebar}) => {
-  const [selectedCategory , setSelectedCategory] = useState('elzero web school');
+  const [selectedCategory , setSelectedCategory] = useState('');
   const [videos , setVideos] = useState([]);
   useEffect(() => {
     fetchFromApi(`search?part=snippet&q=${selectedCategory}`)
