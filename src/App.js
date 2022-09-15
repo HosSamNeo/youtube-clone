@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React , {useState} from 'react';
+import { BrowserRouter as Router , Routes , Route} from 'react-router-dom';
+import { Navbar , Feed , VideoDetails , ChannelDetails , SearchFeed} from './components';
 
-function App() {
+
+const App = () => {
+  const [isSidebar , setIsSidebar] = useState(true);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Router>
+      <Navbar setIsSidebar={setIsSidebar} isSidebar={isSidebar}/>
+      <Routes>
+        <Route path='/' exact element={<Feed isSidebar={isSidebar} />} />
+        <Route path='/video/:id' exact element={<VideoDetails />} />
+        <Route path='/channel/:id' exact element={<ChannelDetails />} />
+        <Route path='/search/:searchTerm' exact element={<SearchFeed />} />
+      </Routes>
+    </Router>
+    )
 }
 
 export default App;

@@ -1,0 +1,35 @@
+.app__navbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    align-items: center;
+    height: 56px;
+    padding: 0px 16px;
+    border-bottom: 1px solid #ddd;
+
+    .app__navbar-left {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        img {
+            width: 150px;
+            padding-left: 16px;
+        }
+    }
+    .app__navbar-right {
+        button {
+            background-color: #FF0000;
+            color: white;
+            border: none;
+            width: 100px;
+            height: 40px;
+            margin-left: 10px;
+            a {
+                color: white;
+                font-weight: bold;
+                font-size: 20px;
+            }
+        }
+
+    }
+}

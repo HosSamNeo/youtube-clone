@@ -1,0 +1,9 @@
+.app__videocard {
+    display: flex;
+    justify-content: center;
+
+    .app__videocard-img {
+        max-width: 300px;
+        height: 180px;
+    }
+}

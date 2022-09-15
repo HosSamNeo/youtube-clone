@@ -1,0 +1,39 @@
+.app__feed {
+    display: flex;
+    flex-direction: row;
+    height: calc(100vh - 58px);
+    @media screen and (max-width:768px) {
+        flex-direction: column;
+    }
+    .app__feed-sidebar {
+        height: 100%;
+        border-right: 1px solid #ddd;
+        background-color: white;
+        @media screen and (max-width:768px) {
+            height: auto;
+        }
+    }
+    .app__feed-videos {
+        height:90vh;
+        flex: 2;
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        .app_feed-videos-text {
+                font-size:24px;
+                font-weight: bold;
+                margin: 10px 0px 2px 15px;
+                color: black;
+
+                span {
+                    color: red;
+                }
+        }
+        .app__feed-videos-box{
+            display:flex;
+            flex-direction: column;
+        }
+    }
+}
