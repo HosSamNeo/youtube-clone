@@ -1,0 +1,46 @@
+.app__channelcard {
+    box-shadow:none;
+    border-radius:20px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    .app__channelcard-info{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        color: #FFF;      
+
+        .app__channelcard-img{
+            border-radius: 50%;
+            height: 180px;
+            width: 180px;
+            margin-bottom: 2px;
+            border: 1px solid #e3e3e3;
+        }
+
+    }
+
+    .app__channelcard-title{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        font-size:12px;
+
+        .app__channelcard-title-verified{
+            font-size:14px;
+            color: gray;
+            margin-left: 5px;
+        }
+        
+    }
+    .app__channelcard-subscribers{ 
+        font-size: 10px;
+        text-align: center;
+        margin-top: -15px;
+
+    }
+
+}
