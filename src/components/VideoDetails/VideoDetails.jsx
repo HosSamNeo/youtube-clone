@@ -26,7 +26,7 @@ const VideoDetails = () => {
     <div className='app__video app__video-container'>
 
         <div className="app__video-player">
-            <ReactPlayer style={{height: "450px"}} controls url={`https://www.youtube.com/watch?v=${id}`} className='app__react-player'/>
+            <ReactPlayer  controls url={`https://www.youtube.com/watch?v=${id}`} className='app__react-player'/>
             
 
               <div style={{
@@ -35,15 +35,14 @@ const VideoDetails = () => {
                 justifyContent:'space-between',
                 py:'1',
                 px:'2',
-                marginTop:'45px'
                 
               }}>
                   <Link style={{
                     display:'flex',
                     marginLeft:'10px'
                   }} to={videoDetail ? `/channel/${videoDetail.snippet.channelId}` : '' }>
-                    <p style={{marginTop:'40px'}}>
-                    <h5 style={{fontSize:'15px'}}>{videoDetail ? videoDetail.snippet.title  : ''}</h5>
+                    <p style={{marginTop:'0px'}}>
+                    <h5 style={{fontSize:'15px' , marginTop:'0px'}}>{videoDetail ? videoDetail.snippet.title  : ''}</h5>
 
                       {videoDetail ? videoDetail.snippet.channelTitle  : ''}
                       <CheckCircle style={{
@@ -53,7 +52,7 @@ const VideoDetails = () => {
                       }} />
                     </p>
                   </Link>
-                  <div style={{marginRight:'10px' , marginTop:'40px'}}>
+                  <div style={{marginRight:'10px'}}>
                     <p style={{opacity:0.7}}>{videoDetail ? parseInt(videoDetail.statistics.viewCount).toLocaleString() : '' } Views</p>
                     <p>{videoDetail ? parseInt(videoDetail.statistics.likeCount).toLocaleString() : '' } Likes</p>
                   </div>
