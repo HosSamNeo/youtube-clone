@@ -40,7 +40,8 @@ const VideoDetails = () => {
                   <Link style={{
                     display:'flex',
                     marginLeft:'10px',
-                    paddingTop:'20px'
+                    paddingTop:'20px',
+                    paddingBottom:'0px'
                   }} to={videoDetail ? `/channel/${videoDetail.snippet.channelId}` : '' }>
                     <p style={{marginTop:'0px'}}>
                     <h5 style={{fontSize:'15px' , marginTop:'0px'}}>{videoDetail ? videoDetail.snippet.title  : ''}</h5>
