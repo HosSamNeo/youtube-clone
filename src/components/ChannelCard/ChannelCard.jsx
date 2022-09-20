@@ -10,7 +10,7 @@ const ChannelCard = ({channelDetail , Margintop}) => {
       <Link to={`/channel/${channelDetail?.snippet?.channelId}`}>
         <div className="app__channelcard-info">
           <img
-            src={channelDetail?.snippet?.thumbnails?.high?.url || demoProfilePicture } alt={channelDetail?.snippet?.title}
+            src={channelDetail?.snippet?.thumbnails?.high?.url ? channelDetail?.snippet?.thumbnails?.high?.url :  demoProfilePicture } alt={channelDetail?.snippet?.title}
             className='app__channelcard-img'
           />
         </div>

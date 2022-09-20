@@ -1,23 +1,23 @@
 .app__videos {
     display:flex;
-    flex-direction: row;
     flex-wrap: wrap;
     margin: 10px;
     justify-content: flex-start;
     .app__videos-container {
         width: calc(100% / 5);
-        @media screen and (max-width:1100px) {
-            width: calc(100% / 4);
-
+        @media screen and (max-width:900px) {
+            width: calc(100% / 3);
         }
         @media screen and (max-width:768px) {
             width: calc(100% / 2);
-
         }
         @media screen and (max-width:450px) {
             width: calc(100% / 1);
-
         }
+    }
+    
+    .app__video-related {
+        width: 100%;
     }
 
 }
