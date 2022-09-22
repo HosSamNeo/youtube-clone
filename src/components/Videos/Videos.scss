@@ -4,7 +4,7 @@
     margin: 10px;
     justify-content: flex-start;
     .app__videos-container {
-        width: calc(100% / 5);
+        width: calc(100% / 4);
         @media screen and (max-width:900px) {
             width: calc(100% / 3);
         }
